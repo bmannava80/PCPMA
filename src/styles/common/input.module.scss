@@ -1,0 +1,26 @@
+input {
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+  border: 1px solid #dfe4e7;
+  border-radius: 2px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  outline: none;
+  ::placeholder {
+    color: rgb(187, 188, 190);
+    font-size: 12px;
+  }
+  :focus {
+    border: 1px solid #000;
+  }
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+  span {
+    color: #43b02a;
+    margin-right: 3px;
+  }
+}
