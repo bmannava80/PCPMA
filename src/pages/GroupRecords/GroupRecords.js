@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Button from "../common/Button";
-import Table from "../common/Table";
-import Container from "../components/Container";
-import Main from "../components/Main";
-import Menu from "../common/Menu/Menu";
+import Container from "../../components/Container";
+import Main from "../../components/Main";
+import Menu from "../../common/Menu/Menu";
 import { v4 as uuidv4 } from "uuid";
 import {
   MAINTAIN_AUTO_ASSIGNMENT_RULES,
@@ -13,10 +11,8 @@ import {
   MAINTAIN_RESTRICTED_GROUP_RULES,
   MAINTAIN_STATE_RULES,
   NON_COVERED_CONFIG,
-} from "../utilities/constans";
-import { groupRecordsData } from "../utilities/mockData";
-import Checkbox from "../common/Checkbox";
-import styles from "../styles/common/table.module.scss";
+} from "../../utilities/constans";
+import MaintainStateRules from "./MaintainStateRules/MaintainStateRules";
 
 const sideMenuItems = [
   {
@@ -56,62 +52,14 @@ const sideMenuItems = [
   },
 ];
 
-const headers = [
-  "State",
-  "Reverse Table State",
-  "Online Assignment Mass Transfer Assignment",
-  "Auto Assignment",
-];
-
 const GroupRecords = () => {
   const [selectedMenuItem, setSelectedMenuItem] = useState(
     sideMenuItems[0].value
   );
   const [activeMenuID, setActiveMenuID] = useState(sideMenuItems[0].id);
 
-  const groupRecordsList = JSON.parse(groupRecordsData);
-
   const tragetContent = {
-    maintainStateRules: (
-      <>
-        <Button variant="default">Save</Button>
-
-        <Table headers={headers}>
-          {!!groupRecordsList.length &&
-            groupRecordsList.map((item) => (
-              <tbody className={styles.tableRow} key={item.id}>
-                <tr>
-                  <td>{item.state}</td>
-                  <td>
-                    {
-                      <Checkbox
-                        checked={item.reverseTableState.checked}
-                        disabled={item.reverseTableState.disabled}
-                      />
-                    }
-                  </td>
-                  <td>
-                    {
-                      <Checkbox
-                        checked={item.onlineAssignment.checked}
-                        disabled={item.onlineAssignment.disabled}
-                      />
-                    }
-                  </td>
-                  <td>
-                    {
-                      <Checkbox
-                        checked={item.autoAssignment.checked}
-                        disabled={item.autoAssignment.disabled}
-                      />
-                    }
-                  </td>
-                </tr>
-              </tbody>
-            ))}
-        </Table>
-      </>
-    ),
+    maintainStateRules: <MaintainStateRules />,
     maintainRestrictedGroupRules: "Maintain Restricted Group Rules",
     maintainIndividualProgramRules: "Maintain Individual Program Rules",
     maintainConfigurationSettings: "Maintain Configuration Settings",
