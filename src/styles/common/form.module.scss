@@ -1,13 +1,14 @@
-form {
+.form {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  // margin: 20%;
+  margin: 10px;
   border-radius: 2px;
   border: 1px solid #dfe4e7;
+}
 
-  span {
-    font-size: 14px;
-    font-weight: bold;
-  }
+.formTitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0 20px 0;
 }

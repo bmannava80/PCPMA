@@ -1,0 +1,113 @@
+@import "../common/variables.scss";
+
+.massMemberAssignmentFormWrapper {
+  display: flex;
+  justify-content: space-between;
+  .leftSideBox,
+  .rightSideBox {
+    width: 50%;
+  }
+}
+
+.numberBox,
+.iconsBox,
+.iconsPlusBox {
+  display: flex;
+}
+.iconsBox {
+  img {
+    width: 25px;
+    cursor: pointer;
+  }
+}
+.plus {
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.radioButtonsBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.selectBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.memberAssignmentBox {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid $border-color;
+  margin: 10px;
+
+  .memberAssignmentTitle {
+    margin: 20px 13px;
+    width: 100%;
+  }
+}
+
+.groupInputBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  div {
+    input {
+      width: 80px;
+    }
+  }
+}
+
+.btnBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-left: 40px;
+}
+
+.countsRadioBox {
+  display: flex;
+  align-items: center;
+  border: 1px solid $border-color;
+}
+.facilityRadioBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.facilityWrapper {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  margin-top: 20px;
+  border: 1px solid $border-color;
+}
+
+.criteria {
+  margin-top: 30px;
+  border: 1px solid $border-color;
+  background: $lighter-grey;
+  .criteriaHeader {
+    display: flex;
+    .number {
+      width: 20px;
+      border-bottom: 1px solid $border-color;
+    }
+    .title {
+      width: 100%;
+      border-bottom: 1px solid $border-color;
+      border-left: 1px solid $border-color;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 3px;
+    }
+  }
+  .content {
+    width: 100%;
+    font-size: 14px;
+    padding: 5px 0 3px;
+    background: lighten($lighter-grey, 10%);
+  }
+}

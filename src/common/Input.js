@@ -12,7 +12,7 @@ const Input = ({
   withIcon,
 }) => {
   return (
-    <div>
+    <div className={styles.formInput}>
       <label>
         {required && <span>*</span>}
         {label}
@@ -26,7 +26,9 @@ const Input = ({
         onChange={onChange}
         required={required}
       />
-      {withIcon}
+      <span className={styles.icon}>
+        <img src={withIcon} />
+      </span>
     </div>
   );
 };

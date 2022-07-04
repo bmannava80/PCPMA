@@ -1,0 +1,62 @@
+@import "./variables.scss";
+
+.dropdownContainer {
+  width: 300px;
+  user-select: none;
+  margin: 10px 0;
+  position: relative;
+  z-index: 9;
+}
+
+.dropdownHeader {
+  padding: 3px 0 3px 10px;
+  background: $white;
+  border: 1px solid $border-color;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 2px;
+
+  span {
+    display: flex;
+  }
+}
+
+.dropdownList {
+  position: absolute;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  padding: 10px;
+  background: $white;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+  font-weight: 500;
+  color: #333;
+  width: 100%;
+  height: fit-content;
+  overflow: hidden auto;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: slategrey;
+    outline: none;
+  }
+}
+.dropdownListItem {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:hover {
+    background: #f4f4f4;
+  }
+}

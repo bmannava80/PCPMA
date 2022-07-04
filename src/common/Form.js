@@ -1,10 +1,14 @@
 import React from "react";
 import styles from "../styles/common/form.module.scss";
 
-const Form = ({ children, onSubmit, title }) => {
+const Form = ({ children, onSubmit, title, className }) => {
   return (
-    <form onSubmit={onSubmit} title={title} className={styles.common}>
-      <span className={styles.common}>{title}</span>
+    <form
+      onSubmit={onSubmit}
+      title={title}
+      className={`${styles.form} ${className}`}
+    >
+      <span className={styles.formTitle}>{title}</span>
       {children}
     </form>
   );

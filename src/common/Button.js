@@ -27,7 +27,7 @@ const Button = ({
 }) => {
   return (
     <button
-      className={`${styles.btn} ${buttonVariant[variant]} ${buttonSize[size]} `}
+      className={` ${buttonVariant[variant]} ${buttonSize[size]} `}
       // variant={variant}
       color={color}
       type={type}

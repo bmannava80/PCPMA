@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/common/table.module.scss";
 
-const Table = ({ headers, data }) => {
+const Table = ({ headers, children }) => {
   return (
     <table className={styles.table}>
       <thead>
@@ -11,14 +11,7 @@ const Table = ({ headers, data }) => {
           ))}
         </tr>
       </thead>
-      <tbody>
-        {/* {data &&
-            data.map(item => (
-                <tr>
-                    <td>{item.title}</td>
-                </tr>
-            ))} */}
-      </tbody>
+      {children}
     </table>
   );
 };
