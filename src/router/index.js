@@ -1,8 +1,7 @@
 import ProviderMaintenance from "../pages/ProviderMaintenance";
 import MemberMaintenance from "../pages/MemberMaintenance";
-import GroupRecords from "../pages/GroupRecords";
-import ClaimsRecords from "../pages/ClaimsRecords";
-import App from "../App";
+import GroupRecords from "../pages/GroupRecords/GroupRecords";
+import ClaimsRecords from "../pages/ClaimsRecords/ClaimsRecords";
 
 export const RoutesNames = {
   PROVIDER_MAINTENANCE: "/provider-maintenance",
